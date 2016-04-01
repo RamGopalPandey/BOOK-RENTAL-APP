@@ -1,0 +1,40 @@
+<html ng-app="bookApp">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="<%= asset_path('book.js') %>"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="<%= asset_path('normalize.css') %>">
+  <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="<%= asset_path('main.css') %>">
+
+</head>
+<body>
+
+<form ng-controller="loginCtrl">
+
+  <h1>Sign Up</h1>
+
+  <fieldset>
+    <legend><span class="number">1</span>Your basic info</legend>
+    <label for="name">First Name:</label>
+    <input type="text" id="name" ng-model="first_name">
+
+    <label for="name">Last Name:</label>
+    <input type="text" id="name" ng-model="last_name">
+
+    <label for="mail">Email: </label>
+    <input type="email" id="mail" ng-model="email">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" ng-model="password">
+
+    <label for="password">Repeat password</label>
+    <input type="password" id="password" ng-model="repassword">
+  </fieldset>
+  <button type="submit" ng-click="createUser()" >Sign Up</button>
+</form>
+
+</body>
+</html>
